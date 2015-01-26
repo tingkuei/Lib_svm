@@ -2,7 +2,7 @@ clear;
 clc;
 [Total_label, Total_Data] = libsvmread('input_for_2_class_SVM.txt');
 avg_accuracy=0;
-for k=1:3000
+for k=1:1000
 r=0.1;
 C=10;
 rand=randperm(size(Total_Data,1));
@@ -28,4 +28,4 @@ end
     avg_accuracy=avg_accuracy+accuracy;
     h=k
 end
-avg_accuracy=avg_accuracy/3000;
+avg_accuracy=avg_accuracy/1000;
